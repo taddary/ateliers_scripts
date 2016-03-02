@@ -91,7 +91,6 @@ fi
 while [ $NUM_DATA_EXTRACT == 0 ] || [ $COUNTER -lt $NUM_DATA_EXTRACT ]; do
 	f_get-systeminfo
 	((COUNTER+="1"))
-	echo "LOOP COUNTER=$COUNTER"
 	sleep $DELAY
 	trap f_display-graph SIGINT
 	trap f_display-graph INT
